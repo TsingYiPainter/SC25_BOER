@@ -3,7 +3,6 @@
 ## What is BOER?
 BOER an inference-serving system that
 integrates MPS atop MIG partitions while preserving QoS. Also, BOER employs a robust Bayesian optimization framework to efficiently configure MPS and accelerates the optimization process.
-![BOER](https://github.com/user-attachments/assets/886e82a9-ae4a-41f5-8d4c-85e57133a8ab)
 
 
 ## How to run
