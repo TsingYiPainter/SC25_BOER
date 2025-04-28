@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package command;
+
+service CommandExecutor {
+  rpc ExecuteCommand (CommandRequest) returns (CommandResponse);
+}
+
+service Scheduler {
+  rpc ScheduleCommand (SchedulerRequest) returns (SchedulerResponse);
+}
+
+message CommandRequest {
+  string command = 1;  // 要执行的命令
+}
+
+message CommandResponse {
+  string result = 1;  // 命令执行结果
+  int32 status_code = 2;  // 执行状态码
+}
+
+message SchedulerRequest {
+  string worker_id = 1;  // 工作节点ID（worker1 或 worker2）
+  string command = 2;    // 要执行的命令
+}
+
+message SchedulerResponse {
+  string result = 1;  // 命令执行结果
+  int32 status_code = 2;  // 执行状态码
+}
