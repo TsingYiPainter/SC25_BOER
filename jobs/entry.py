@@ -454,8 +454,8 @@ def feedback_search_max_true(task, RPS, remote_half_QoS):
             right = mid - 1  
 
     ## !!!
-    with open(dynamic_path, 'a') as file:  # 追加模式
-        for item in dynamic_list:  # 遍历列表
+    with open(dynamic_path, 'a') as file:
+        for item in dynamic_list: 
             file.write(f"{item[0]}, {item[1]}, {item[2]},{item[3]}\n") 
 
     return left 
@@ -803,10 +803,6 @@ if __name__ == "__main__":
 
             #percentile_95 = min(half_QoS-1,percentile_95)        
             if percentile_95 <= half_QoS:
-                ## ！！！
-                # with open("/data/wyh/MIG_MPS/tmp/dynamic/dynamic_vgg19_MIG-025b3a98-2de6-5a56-9752-ca17816855b4.txt", 'a') as file:  # 追加模式
-                #     file.write('model A\n')
-                #     file.write(f"{percentile_95}\n") 
 
                 with torch.no_grad():
                     valid_list = []

@@ -11,20 +11,20 @@ service Scheduler {
 }
 
 message CommandRequest {
-  string command = 1;  // 要执行的命令
+  string command = 1;
 }
 
 message CommandResponse {
-  string result = 1;  // 命令执行结果
-  int32 status_code = 2;  // 执行状态码
+  string result = 1;
+  int32 status_code = 2;
 }
 
 message SchedulerRequest {
-  string worker_id = 1;  // 工作节点ID（worker1 或 worker2）
-  string command = 2;    // 要执行的命令
+  string worker_id = 1;
+  string command = 2;
 }
 
 message SchedulerResponse {
-  string result = 1;  // 命令执行结果
-  int32 status_code = 2;  // 执行状态码
+  string result = 1;
+  int32 status_code = 2;
 }
