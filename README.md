@@ -30,6 +30,14 @@ each equipped with 2 * Intel Xeon Gold 5320 CPUs, 4 * NVIDIA A100 80GB GPUs, and
 ### Software
 Refer to `environment.yml`
 
+Run the following commands:
+
+```
+$conda env create -f environment.yml
+$python -m spacy download de_core_news_sm
+$python -m spacy download en-core-web-sm
+```
+
 
 
 
